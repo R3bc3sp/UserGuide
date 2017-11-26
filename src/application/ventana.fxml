@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="633.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controlador">
+   <children>
+      <AnchorPane fx:id="pane1" prefHeight="633.0" prefWidth="620.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="22.0" text="Introduccion GUIA DE USUARIO">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="28.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff5400" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <JFXTextArea layoutX="58.0" layoutY="181.0" prefHeight="288.0" prefWidth="505.0" text="Requisitos previos:&#10;&#10;    Un dispositivo con Android 4.0 (Ice Cream Sandwich) o una versión más reciente y servicios de Google Play 11.0.4 o una versión más reciente.&#10;    El SDK de los Servicios de Google Play del Repositorio de Google, disponible en el Android SDK Manager.&#10;    La versión más reciente de Android Studio, versión 1.5 o más reciente.&#10;&#10;Si aún no tienes un proyecto de Android Studio, puedes descargar uno de nuestros ejemplos de inicio rápido si solo quieres probar una función de Firebase. Si estás usando un inicio rápido, recuerda obtener el ID de la aplicación desde el archivo build.gradle que se encuentra en la carpeta del módulo de tu proyecto (por lo general, app/), ya que necesitarás el nombre de este paquete para el siguiente paso.&#10;Nota: Si estás actualizando desde una versión 2.X del SDK de Firebase, consulta nuestra guía de actualización para Android para comenzar.">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font>
+            </JFXTextArea>
+            <ImageView fitHeight="147.0" fitWidth="313.0" layoutX="183.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/Firebase.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane2" prefHeight="633.0" prefWidth="620.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <Label layoutX="129.0" layoutY="33.0" text="Agregra FIREBASE a tu App">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="29.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff5400" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <JFXTextArea layoutX="78.0" layoutY="120.0" prefHeight="384.0" prefWidth="464.0" text="Agrega Firebase a tu app&#10;&#10;Si estás usando la versión más reciente de Android Studio (versión 2.2 o más reciente), te recomendamos usar Firebase Assistant para conectar tu app con Firebase. Firebase Assistant puede conectar tu proyecto existente o crear uno nuevo por ti. También instala automáticamente todas las dependencias de Gradle necesarias.&#10;&#10;Si estás usando una versión más antigua de Android Studio o tienes una configuración de proyecto más compleja, puedes agregar Firebase a tu app de forma manual.&#10;Cómo usar Firebase Assistant&#10;&#10;Para abrir Firebase Assistant en Android Studio, haz lo siguiente:&#10;&#10;    Haz clic en Herramientas &gt; Firebase para abrir la ventana de Assistant.&#10;    Haz clic para expandir una de las funciones que se muestran (por ejemplo, Analytics), y haz clic en el vínculo del instructivo proporcionado (por ejemplo, Registrar un evento de Analytics).&#10;    Haz clic en el botón para conectarte a Firebase y agregar el código necesario a tu app.&#10;&#10;Eso es todo. Puedes avanzar a los pasos siguientes." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane3" prefHeight="633.0" prefWidth="620.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <Label layoutX="208.0" layoutY="22.0" text="Agrega el SDK">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="32.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff5400" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <JFXTextArea layoutX="78.0" layoutY="132.0" prefHeight="447.0" prefWidth="464.0" text="Agrega el SDK&#10;&#10;Si quieres integrar las bibliotecas de Firebase a uno de tus proyectos, debes hacer algunas tareas básicas para preparar tu proyecto de Android Studio. Es posible que ya hayas hecho esto en el proceso de agregar Firebase a tu app.&#10;&#10;Primero, agrega reglas a tu archivo build.gradle de nivel de raíz para incluir el complemento de google-services:&#10;&#10;buildscript {&#10;    // ...&#10;    dependencies {&#10;        // ...&#10;        classpath 'com.google.gms:google-services:3.1.0'&#10;    }&#10;}&#10;&#10;Luego, en el archivo Gradle de tu módulo (generalmente, app/build.gradle), agrega la línea apply plugin en la parte inferior del archivo para habilitar el complemento de Gradle:&#10;&#10;apply plugin: 'com.android.application'&#10;&#10;android {&#10;  // ...&#10;}&#10;&#10;dependencies {&#10;  // ...&#10;  compile 'com.google.firebase:firebase-core:11.0.4'&#10;&#10;  // Getting a &quot;Could not find&quot; error? Make sure you have&#10;  // the latest Google Repository in the Android SDK manager&#10;}&#10;&#10;// ADD THIS AT THE BOTTOM&#10;apply plugin: 'com.google.gms.google-services'&#10;&#10;También debes agregar las dependencias para los SDK de Firebase que deseas usar. Te recomendamos comenzar con com.google.firebase:firebase-core, que proporciona la función de Google Analytics para Firebase. Consulta la lista de bibliotecas disponibles." />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane4" prefHeight="633.0" prefWidth="620.0" style="-fx-background-color: #A4A4A4;">
+         <children>
+            <Label layoutX="102.0" layoutY="61.0" text="Disfruta y Aprende a USAR FIREBASE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="25.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#ff5400" />
+                        <Stop color="BLACK" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="421.0" layoutY="594.0" text="Auth0r: Guillermo Rebuffo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <WebView fx:id="Webview" layoutX="30.0" layoutY="98.0" prefHeight="425.0" prefWidth="575.0" />
+         </children>
+      </AnchorPane>
+      <JFXButton layoutX="50.0" layoutY="530.0" onAction="#backAction" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="&lt;" />
+      <JFXButton layoutX="500.0" layoutY="530.0" onAction="#nextAction" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #ffffff; -fx-background-radius: 50;" text="&gt;" />
+      <ImageView fitHeight="85.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Downloads/smartphone.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
